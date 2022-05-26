@@ -10,9 +10,11 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
+  --color-dark-blue:#061228;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-light-blue:#062A40;
 
   /* Font size */
   --font-large: 48px;
@@ -43,6 +45,7 @@ body{
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   cursor: default;
+  background-color:var(--color-light-white);
 }
 
 a{
@@ -98,7 +101,7 @@ p {
 #navbar{
   display: flex;
   justify-content: space-between;
-  background-color:var(--color-pink);
+  background-color:var(--color-dark-blue);
   align-items: center;
   color:var(--color-white);
   padding: 16px;
@@ -111,6 +114,7 @@ p {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
+
 .navbar__menu__item{
   padding: 8px 12px;
   margin: 0 4px;
@@ -135,10 +139,9 @@ p {
   display: none;
 }
 /* Home */
-
 #Home{
-  background: url("imgs/homebackground.PNG") center/cover no-repeat;
-  padding: 40px;
+  background: url("imgs/bubble-animated-background.svg");
+  padding: 20px;
   text-align: center;
 }
 
@@ -163,7 +166,6 @@ p {
 }
 
 /* Section common */
-
 .section{
   padding:  50px;
   text-align: center;
@@ -173,15 +175,12 @@ p {
   max-width: 1200px;
   margin: auto;
 }
-
 /* About */
-
 .about__majors{
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
 }
-
 .major__icon{
   width: 170px;
   height: 170px;
@@ -235,7 +234,7 @@ font-size: var(--font-micro);
 /* Skill */
 
 #skills{
-  background-color:  var(--color-yellow) ;
+  background-color:  var(--color-light-blue) ;
 }
 
 .skillset{
@@ -429,7 +428,7 @@ background-color: var(--color-white);
 
 /* Contact */
 #contact{
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-blue);
 }
 .contact__title
 ,.contact__email
