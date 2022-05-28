@@ -15,7 +15,7 @@
   --color-orange: #feb546;
   --color-black: #000000;
   --color-light-blue:#062A40;
-
+  --color-llight-blue:#234459;
   /* Font size */
   --font-large: 48px;
   --font-medium: 28px;
@@ -187,7 +187,24 @@ p {
 
 
 /* About */
+.about__description{
+  display: flex;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 5px;
+}
 
+.about__description h2{
+  font-weight: var(--weight-bold);
+  color: var(--color-blue);
+  margin-right:15px;
+}
+.about__description p{
+  margin-top: 10px;
+}
+.about__impormation{
+  margin: 20px 0px;
+}
 .job{
   display: flex;
   align-items: center;
@@ -210,6 +227,11 @@ font-size: var(--font-small);
 .job__period{
 font-size: var(--font-micro);
 }
+.job i{
+  font-size: 50px;
+  margin:10px 20px;
+}
+
 
 /* Skill */
 
@@ -219,6 +241,10 @@ font-size: var(--font-micro);
 #skills h1, #skills h2, #skills p{
   color: var(--color-white);
 }
+.skills__majors h2{
+  font-weight: var(--weight-semi-bold);
+}
+
 .skills__majors .major{
   position: relative;
   padding: 10px 25px;
@@ -258,57 +284,33 @@ font-size: var(--font-micro);
   transform: translateY(0px);
 }
 
+
+/* flex --> none 잠시 가려놈 */
+
 .skillset{
   display: flex;
-  background-color: var(--color-light-grey);
+  flex-direction: column;
+  background-color:#376B8C;
   color:var(--color-light-white);
-  margin: 20px 0;
+  width: 100%;
+  margin: auto;
+  margin-top: 35px;
 }
 
 .skillset__title{
   color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
 }
 
-.skillset__left{
-  /* flex basis 범위 할당 */
-  flex-basis: 60%;
-  background-color: var(--color-dark-grey);
-  padding: 15px 40px;
-}
-.skill
-{
-  margin-bottom: 32px;
-}
-
-.skill__description{
-  display: flex;
-  justify-content: space-between;
-}
-
-.skill__bar{
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-grey);
-}
-
-.skill__value{
-  height: 3px;
-  background-color: var(--color-orange);
-}
-
-.skillset__right{
-  flex-basis: 40%;
-}
 
 .tools{
-  background-color:  var(--color-grey);
+  background-color: var(--color-llight-blue);
 }
 
 .tools, .etc{
-  padding: 20px;
+  padding: 5px;
 }
-
-
 
 .skills__majors{
   display: flex;
@@ -329,16 +331,6 @@ font-size: var(--font-micro);
   margin-bottom:  16px;
 }
 
-/*
-.major__icon i{
-  transition: all var(--anmimation-duration) ease;
-}
-.major__icon:hover i {
-  color: var(--color-pink);
-  transform: rotate(-30deg) scale(1.1);
-} 필요 없는 부분 수정.
-*/
-
 .major__title, .major__description{
   color:var(--color-white)
 }
@@ -346,40 +338,55 @@ font-size: var(--font-micro);
   font-size: var(--font-small);
 }
 
+@property --p {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+
 .wrap-circles{
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .circle {
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 155px;
+  height: 155px;
   margin: 0.5rem;
   border-radius: 50%;
   background: var(--color-dark-grey);
   overflow: hidden;
-  transition: all var(--anmimation-duration) ease;
+  transition: --p 0.7s;
+  
 }
 .circle.per-html{
-  background-image: conic-gradient(var(--color-blue) 99%, var(--color-dark-grey) 0);
+  background-image: conic-gradient(var(--color-blue) var(--p), var(--color-dark-grey) 0);
 }
 
 .circle.per-c{
-  background-image: conic-gradient(var(--color-blue) 95%, var(--color-dark-grey) 0);
+  background-image: conic-gradient(var(--color-blue) var(--p), var(--color-dark-grey) 0);
 }
 
 .circle.per-css{
-  background-image: conic-gradient(var(--color-blue) 90%, var(--color-dark-grey) 0);
+  background-image: conic-gradient(var(--color-blue) var(--p), var(--color-dark-grey) 0);
 }
 
 .circle.per-java {
-  background-image: conic-gradient(var(--color-blue) 90%, var(--color-dark-grey) 0);
+  background-image: conic-gradient(var(--color-blue) var(--p), var(--color-dark-grey) 0);
 }
 
 .circle.per-javascript{
-  background-image: conic-gradient(var(--color-blue) 80%, var(--color-dark-grey) 0);
+  background-image: conic-gradient(var(--color-blue) var(--p), var(--color-dark-grey) 0);
 }
-.circle .inner {
+
+.select
+{
+  opacity: 0;
+}
+
+.inner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,15 +394,45 @@ font-size: var(--font-micro);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   background:var(--color-light-blue);
   border-radius: 50%;
-  font-size: var(--font-small);
-  font-weight: 300;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
   color:var(--color-white);
+  transition: all var(--anmimation-duration) ease-in;
 }
 
+.per-html:hover,
+.per-html:hover .select{
+  --p: 99%;
+  opacity: 1;
+}
+
+.per-c:hover,
+.per-c:hover .select{
+  --p: 95%;
+  opacity: 1;
+}
+
+.per-css:hover,
+.per-css:hover .select
+{
+  --p:90%;
+  opacity: 1;
+}
+.per-java:hover,
+.per-java:hover .select
+{
+  --p:90%;
+  opacity: 1;
+}
+.per-javascript:hover
+,.per-javascript:hover .select{
+  --p:80%;
+  opacity: 1;
+}
 
 
 
@@ -570,7 +607,7 @@ color: var(--color-yellow);
     align-items: flex-start;
   }
   .navbar__menu{
-    flex-direction:  column;
+    flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
@@ -585,6 +622,10 @@ color: var(--color-yellow);
 
   .skillset{
     flex-direction: column;
+  }
+  .wrap-circles{
+    flex-direction: column;
+    align-items: center;
   }
 
   .project{
