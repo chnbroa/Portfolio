@@ -221,11 +221,12 @@ font-size: var(--font-micro);
 }
 .skills__majors .major{
   position: relative;
+  padding: 10px 25px;
 }
 
 .skills__major__description{
   position: absolute;
-  padding: 20px 35px;
+  padding: 25px 35px;
   background-color: black;
   color: var(--color-white);
   display:flex;
@@ -233,17 +234,21 @@ font-size: var(--font-micro);
   justify-content: center;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   opacity: 0;
   border-radius: 30px;
   transform: translateY(10px);
-  transition: all var(--anmimation-duration) ease-in;
+  transition: all var(--anmimation-duration) ease;
 }
 .skills__major__description .skill__bar{
   margin-bottom: 10px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
 }
 .skills__major__description .skill__value{
+  height: 3px;
   background-color: var(--color-blue);
 }
 
@@ -252,7 +257,6 @@ font-size: var(--font-micro);
   opacity: 0.9;
   transform: translateY(0px);
 }
-
 
 .skillset{
   display: flex;
@@ -268,7 +272,7 @@ font-size: var(--font-micro);
   /* flex basis 범위 할당 */
   flex-basis: 60%;
   background-color: var(--color-dark-grey);
-  padding: 20px 40px;
+  padding: 15px 40px;
 }
 
 .skill
@@ -283,13 +287,13 @@ font-size: var(--font-micro);
 
 .skill__bar{
   width: 100%;
-  height: 3px;
+  height: 15px;
   background-color: var(--color-grey);
 }
 
 .skill__value{
   height: 3px;
-  background-color: var(--color-orange);
+  background-color: var(--color-blue);
 }
 
 .skillset__right{
@@ -307,7 +311,7 @@ font-size: var(--font-micro);
 .skills__majors{
   display: flex;
   justify-content: space-between;
-  margin: 80px 0;
+  margin: 5% 0;
 }
 .major__icon{
   width: 170px;
