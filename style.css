@@ -199,9 +199,11 @@ p {
   color: var(--color-blue);
   margin-right:15px;
 }
+
 .about__description p{
   margin-top: 10px;
 }
+
 .about__impormation{
   margin: 20px 0px;
 }
@@ -332,8 +334,9 @@ font-size: var(--font-micro);
 }
 
 .major__title, .major__description{
-  color:var(--color-white)
+  color:var(--color-white);
 }
+
 .major__description{
   font-size: var(--font-small);
 }
@@ -341,7 +344,7 @@ font-size: var(--font-micro);
 @property --p {
   syntax: '<percentage>';
   inherits: false;
-  initial-value: 0%;
+  initial-value:0%;
 }
 
 
