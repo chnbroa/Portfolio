@@ -1,4 +1,4 @@
-
+'use strict'
 
 const navbarMenu = document.querySelector(".navbar__menu");
 
@@ -8,6 +8,7 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
 })
 

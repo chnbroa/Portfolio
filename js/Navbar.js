@@ -9,3 +9,10 @@ document.addEventListener("scroll", () => {
     navbar.classList.remove("navbar--dark");
   }
 })
+
+
+//Navbar Toggle button
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+})

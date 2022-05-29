@@ -1,3 +1,4 @@
+'use strict'
 
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
