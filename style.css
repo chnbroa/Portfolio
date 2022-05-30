@@ -135,7 +135,6 @@ p {
   cursor: pointer;
   border:  1px  solid transparent;
   border-radius: var(--size-border-radius);
- 
 }
 
 .navbar__menu__item:hover{
@@ -451,6 +450,7 @@ font-size: var(--font-micro);
 
 /* Work */
 
+/*
 .work__categories{
   margin: 40px;
 }
@@ -486,7 +486,7 @@ font-size: var(--font-micro);
   opacity: 0;
   transition: all var(--anmimation-duration) ease-in;
 }
-
+*/
 .work__projects{
   display: flex;
   flex-wrap:  wrap;
@@ -502,7 +502,7 @@ font-size: var(--font-micro);
   width: 280px;
   height: 250px;
   margin: 2px;
-  background-color:  var(--color-light-white);
+  background-color:  var(--color-dark-white );
 }
 .project__img{
   max-width: 100%;
@@ -531,20 +531,38 @@ font-size: var(--font-micro);
 }
 
 .project__description h3{ 
-  color: var(--color-blue);
+  color: var(--color-blue );
   font-weight: var(--weight-semi-bold);
 }
+.description_text span{
+color: var(--color-white);
+}
+.description__icon{
+  margin:20px 50px;
+  display: flex;
+  justify-content: space-around;
 
+}
+
+.description__icon i{
+  font-size: 40px;
+  transition: all var(--anmimation-duration) ease;
+}
+
+.description__icon i:hover{
+  color: var(--color-blue);
+  transform: scale(1.1);
+}
 .project__description h3:after {
   content:  '';
   display: block;
   position: relative;
   left: 50%;
-  width: 60px;
+  width: 100px;
   height: 2px;
   transform: translateX(-50%);
   margin-top: 8px;
-  background-color: var(--color-dark-white);
+  background-color: var(--color-light-white);
 }
 
 /* Testimonial */
