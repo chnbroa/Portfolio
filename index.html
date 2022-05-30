@@ -17,9 +17,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script src="js/Navbar.js" defer></script>
   <script src="js/Menu.js" defer></script>
   <script src="js/Home.js" defer></script>
+
+
 
 <body>
   <!-- Navbar -->
@@ -36,7 +42,6 @@
       <li class="navbar__menu__item" data-link="#about">About </li>
       <li class="navbar__menu__item" data-link="#skills">Skills</li>
       <li class="navbar__menu__item" data-link="#work">My work</li>
-      <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
       <li class="navbar__menu__item" data-link="#contact">Contact</li>
     </ul>
 
@@ -55,7 +60,7 @@
         I'm Byeong Chan :)
       </h1>
       <h2 class="home__description">
-        고치자
+        Developing Junior Developers
       </h2>
       <button class="home__contact">Contact ME</button>
     </div>
@@ -130,10 +135,7 @@
     <div class="section__container">
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
-      <p>
-        씨불 씨불 씨불
-        씨불 씨불
-      </p>
+
 
       <div class="skills__majors">
         <div class="major">
@@ -335,10 +337,14 @@
   <section id="work" class="section">
     <div class="section__container">
       <h1>My work</h1>
-      <h3>Projects</h3>
+      <h2>Projects</h2>
       <div class="work__projects">
 
-        <div class="project">
+        <div class="iconmouse">
+          <span class="ball"></span>
+        </div>
+
+        <div class="project project_left" data-aos="fade-up-right">
           <img src="imgs/projects/youtube.png" alt="Youtube" class="project__img" />
           <div class="project__description">
             <div class="description_text">
@@ -351,11 +357,12 @@
               <a href="https://chnbroa.github.io/YoutubeClone/" target='_blank'><i class="fa-solid fa-link"></i></a>
             </div>
           </div>
+
         </div>
 
 
 
-        <div class="project">
+        <div class="project project_right" data-aos="fade-down-right">
           <img src="imgs/projects/TodoList.PNG" alt="TodoList" class="project__img" />
           <div class="project__description">
             <div class="description_text">
@@ -370,7 +377,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <div class="project project_left" data-aos="fade-up-right">
           <img src="imgs/projects/project1.PNG" alt="Shopping Mall" class="project__img" />
           <div class="project__description">
             <div class="description_text">
@@ -385,7 +392,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <div class="project project_right" data-aos="fade-down-right">
           <img src="imgs/projects/DESIGN.png" alt="HTMLpractice" class="project__img" />
           <div class="project__description">
             <div class="description_text">
@@ -399,45 +406,13 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
 
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="section">
-    <div class="section__container">
-      <h1>Testimonials</h1>
-      <h3>See what they say about me</h3>
-      <div class="testimonials">
-        <div class="testimonial">
-          <img src="imgs/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
-          <div class="testimonial__speech-bubble">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              fuga libero nulla eveniet aperiam laborum, quis provident
-              quibusdam officiis reprehenderit, placeat neque perspiciatis vero
-              explicabo tempora, dignissimos accusantium inventore ducimus!
-            </p>
-            <p class="name"><a href="">Ellie</a> / Samsung</p>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial__speech-bubble">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              fuga libero nulla eveniet aperiam laborum, quis provident
-              quibusdam officiis reprehenderit, placeat neque perspiciatis vero
-              explicabo tempora, dignissimos accusantium inventore ducimus!
-            </p>
-            <p class="name"><a href="">Ellie</a> / Samsung</p>
-          </div>
-          <img src="imgs/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- Contact -->
   <section id="contact" class="section">
     <h1 class="contact__title">Let's talk</h1>
@@ -446,16 +421,22 @@
       <a href="https://github.com/chnbroa" target="_blank">
         <i class="fab fa-github"></i>
       </a>
-      <a href="#" target="_blank">
-        <i class="fa fa-linkedin-square"></i>
+      <a href="https://www.facebook.com/chnbroa011/" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
       </a>
     </div>
     <p class="contact__rights">
-      2022 Dream Coding Ellie - ALL rights reserved
+      © 2022 All rights reserved.
     </p>
-
   </section>
 
+
+  <script>
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 1500
+    });
+  </script>
 </body>
 
 </html>
