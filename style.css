@@ -112,7 +112,7 @@ p {
 #navbar.navbar--dark{
   background-color: var(--color-dark-blue);
   padding: 8px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar__menu{
@@ -264,7 +264,7 @@ font-size: var(--font-micro);
 .skills__major__description{
   position: absolute;
   padding: 25px 35px;
-  background-color: black;
+  background-color:  var(--color-black);
   color: var(--color-white);
   display:flex;
   flex-direction: column;
@@ -295,8 +295,6 @@ font-size: var(--font-micro);
   transform: translateY(0px);
 }
 
-
-/* flex --> none 잠시 가려놈 */
 
 .skillset{
   display: flex;
@@ -356,7 +354,7 @@ font-size: var(--font-micro);
   initial-value:0%;
 }
 
-
+/* Major skills */
 .wrap-circles{
   display: flex;
   justify-content: space-between;
